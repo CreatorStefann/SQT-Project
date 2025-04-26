@@ -5,6 +5,7 @@ import ro.ase.kebab.exceptions.InvalidIngredientException;
 import ro.ase.kebab.model.Category;
 import ro.ase.kebab.model.Ingredient;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Supplier;
@@ -37,4 +38,11 @@ public class IngredientFactory {
                         .orElseThrow(() -> new InvalidIngredientException("Unknown ingredient: " + name)))
                 .map(Supplier::get);
     }
+
+    public static List<Ingredient> getAllIngredients() {
+        return INGREDIENTS.values().stream()
+                .map(Supplier::get)
+                .toList();
+    }
+
 }
