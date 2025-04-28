@@ -1,4 +1,4 @@
-package ro.ase.cts.domain;
+package ro.ase.kebab.model;
 
 public enum Category {
     PROTEIN,
@@ -9,3 +9,4 @@ public enum Category {
     FIBER,
     HEALTHY
 }
+
